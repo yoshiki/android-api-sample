@@ -10,15 +10,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import jp.clouder.android.sample.R;
 
-public class ArticlesFragment extends ListFragment
-{
+public class ArticlesFragment extends ListFragment {
     boolean mDualPane;
     int mCurCheckPosition = 0;
     int mShownCheckPosition = -1;
 
     @Override
-    public void onActivityCreated (Bundle savedInstanceState)
-    {
+    public void onActivityCreated (Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         String[] list = { "a", "b", "c", "d", "e", "f", "g" };
         setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, list));
@@ -50,8 +48,7 @@ public class ArticlesFragment extends ListFragment
         showDetails(position);
     }
 
-    public void showDetails(int index)
-    {
+    public void showDetails(int index) {
         mCurCheckPosition = index;
 
         if (mDualPane) {

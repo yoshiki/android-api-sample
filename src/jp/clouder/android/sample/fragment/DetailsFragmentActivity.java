@@ -6,8 +6,7 @@ import android.support.v4.app.FragmentActivity;
 
 public class DetailsFragmentActivity extends FragmentActivity {
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {

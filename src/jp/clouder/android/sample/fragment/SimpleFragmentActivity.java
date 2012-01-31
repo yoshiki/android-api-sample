@@ -11,14 +11,12 @@ import jp.clouder.android.sample.R;
 
 public class SimpleFragmentActivity extends FragmentActivity {
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.simple_fragment_main);
     }
 
-    public static class FragmentSimple extends Fragment
-    {
+    public static class FragmentSimple extends Fragment {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             LinearLayout ll = (LinearLayout)inflater.inflate(R.layout.simple_fragment_textview, container, false);

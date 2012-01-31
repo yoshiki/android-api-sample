@@ -12,20 +12,16 @@ import android.widget.ListView;
 import android.widget.Toast;
 import jp.clouder.android.sample.R;
 
-public class ListFragmentActivity extends FragmentActivity
-{
+public class ListFragmentActivity extends FragmentActivity {
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_fragment_main);
     }
 
-    public static class MyListFragment extends ListFragment
-    {
+    public static class MyListFragment extends ListFragment {
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-        {
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             LinearLayout ll = (LinearLayout)inflater.inflate(R.layout.list_fragment_list, container, false);
             return ll;
         }
@@ -39,8 +35,7 @@ public class ListFragmentActivity extends FragmentActivity
         }
 
         @Override
-        public void onListItemClick (ListView l, View v, int position, long id)
-        {
+        public void onListItemClick (ListView l, View v, int position, long id) {
             Toast.makeText(getActivity(), "Tap " + position, Toast.LENGTH_SHORT).show();
         }
     }
