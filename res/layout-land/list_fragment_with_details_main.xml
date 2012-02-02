@@ -5,7 +5,7 @@
               android:layout_height="match_parent"
         >
     <fragment
-            class="jp.clouder.android.sample.fragment.ArticlesFragment"
+            class="jp.clouder.android.sample.fragment.ListFragmentWithDetailsActivity$MyListFragment"
             android:layout_weight="1"
             android:layout_width="0dip"
             android:layout_height="match_parent"

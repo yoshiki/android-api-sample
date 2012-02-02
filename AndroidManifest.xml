@@ -10,7 +10,8 @@
         </activity>
         <activity android:name=".fragment.SimpleFragmentActivity" />
         <activity android:name=".fragment.ListFragmentActivity" />
-        <activity android:name=".fragment.ArticlesFragmentActivity" />
+        <activity android:name=".fragment.ListFragmentWithDetailsActivity" />
         <activity android:name=".fragment.DetailsFragmentActivity" />
+        <activity android:name=".fragment.SimpleViewPagerActivity" />
     </application>
 </manifest>

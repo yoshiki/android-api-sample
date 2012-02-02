@@ -6,14 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import jp.clouder.android.sample.fragment.ArticlesFragmentActivity;
+import jp.clouder.android.sample.fragment.ListFragmentWithDetailsActivity;
 import jp.clouder.android.sample.fragment.ListFragmentActivity;
 import jp.clouder.android.sample.fragment.SimpleFragmentActivity;
+import jp.clouder.android.sample.fragment.SimpleViewPagerActivity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class SampleListActivity extends ListActivity {
     private SampleList mSampleList;
@@ -33,37 +31,25 @@ public class SampleListActivity extends ListActivity {
     }
 
     public class SampleList {
-        private ArrayList<Map<String, Object>> mList = new ArrayList<Map<String, Object>>();
+        private LinkedHashMap<String, Object> mSampleList = new LinkedHashMap<String, Object>();
 
         public SampleList() {
-            mList.add(new HashMap<String, Object>() {{
-                put("Simple Fragment", SimpleFragmentActivity.class );
-            }});
-            mList.add(new HashMap<String, Object>() {{
-                put("List Fragment", ListFragmentActivity.class);
-            }});
-            mList.add(new HashMap<String, Object>() {{
-                put("List and detail Fragment", ArticlesFragmentActivity.class);
-            }});
+            mSampleList.put("Simple Fragment", SimpleFragmentActivity.class );
+            mSampleList.put("List Fragment", ListFragmentActivity.class);
+            mSampleList.put("List and detail Fragment", ListFragmentWithDetailsActivity.class);
+            mSampleList.put("Simple ViewPager", SimpleViewPagerActivity.class);
         }
 
         public String[] getSampleNameList() {
-            String [] sampleNameList = new String[mList.size()];
-            for (int i = 0; i < mList.size(); i++) {
-                Iterator j = getSampleMap(i).keySet().iterator();
-                sampleNameList[i] = (String)j.next();
-            }
-            return sampleNameList;
-        }
-        
-        public HashMap<String, Object> getSampleMap(int index) {
-            return (HashMap<String, Object>)mList.get(index);
+            return mSampleList.keySet().toArray(new String[0]);
         }
 
         public Object getSampleClass(int index) {
-            HashMap<String, Object> sample = getSampleMap(index);
-            Iterator i = sample.keySet().iterator();
-            return sample.get((String)i.next());
+            Iterator iter = mSampleList.keySet().iterator();
+            for (int i = 0; i < index; i++) {
+                iter.next();
+            }
+            return mSampleList.get(iter.next());
         }
     }
 }
