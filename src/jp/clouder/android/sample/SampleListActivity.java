@@ -6,10 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import jp.clouder.android.sample.fragment.ListFragmentWithDetailsActivity;
-import jp.clouder.android.sample.fragment.ListFragmentActivity;
-import jp.clouder.android.sample.fragment.SimpleFragmentActivity;
-import jp.clouder.android.sample.fragment.SimpleViewPagerActivity;
+import jp.clouder.android.sample.fragment.*;
 
 import java.util.*;
 
@@ -38,6 +35,7 @@ public class SampleListActivity extends ListActivity {
             mSampleList.put("List Fragment", ListFragmentActivity.class);
             mSampleList.put("List and detail Fragment", ListFragmentWithDetailsActivity.class);
             mSampleList.put("Simple ViewPager", SimpleViewPagerActivity.class);
+            mSampleList.put("Multi ViewPager", MultiViewPagerActivity.class);
         }
 
         public String[] getSampleNameList() {

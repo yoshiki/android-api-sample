@@ -13,5 +13,6 @@
         <activity android:name=".fragment.ListFragmentWithDetailsActivity" />
         <activity android:name=".fragment.DetailsFragmentActivity" />
         <activity android:name=".fragment.SimpleViewPagerActivity" />
+        <activity android:name=".fragment.MultiViewPagerActivity" />
     </application>
 </manifest>
