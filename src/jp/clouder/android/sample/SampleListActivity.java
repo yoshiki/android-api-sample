@@ -36,6 +36,7 @@ public class SampleListActivity extends ListActivity {
             mSampleList.put("List and detail Fragment", ListFragmentWithDetailsActivity.class);
             mSampleList.put("Simple ViewPager", SimpleViewPagerActivity.class);
             mSampleList.put("Multi ViewPager", MultiViewPagerActivity.class);
+            mSampleList.put("Simple DialogFragment", SimpleDialogFragmentActivity.class);
         }
 
         public String[] getSampleNameList() {

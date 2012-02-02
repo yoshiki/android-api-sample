@@ -23,8 +23,7 @@ public class MultiViewPagerActivity extends FragmentActivity {
     private MyAdapter1 mAdapter1;
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.multi_view_pager_main);
 
@@ -39,30 +38,24 @@ public class MultiViewPagerActivity extends FragmentActivity {
         mPager1.setBackgroundColor(Color.LTGRAY);
     }
 
-    public static class MyAdapter0 extends FragmentPagerAdapter
-    {
-        public MyAdapter0(FragmentManager fm)
-        {
+    public static class MyAdapter0 extends FragmentPagerAdapter {
+        public MyAdapter0(FragmentManager fm) {
             super(fm);
         }
 
         @Override
-        public int getCount()
-        {
+        public int getCount() {
             return NUM_ITEMS;
         }
 
         @Override
-        public Fragment getItem(int position)
-        {
+        public Fragment getItem(int position) {
             return MyFragment0.newInstance(position);
         }
     }
 
-    public static class MyFragment0 extends Fragment
-    {
-        static MyFragment0 newInstance(int num)
-        {
+    public static class MyFragment0 extends Fragment {
+        static MyFragment0 newInstance(int num) {
             MyFragment0 f = new MyFragment0();
             Bundle args = new Bundle();
             args.putInt("num", num);
@@ -71,8 +64,7 @@ public class MultiViewPagerActivity extends FragmentActivity {
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-        {
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             LinearLayout ll = (LinearLayout)inflater.inflate(R.layout.multi_view_pager_pagerview, container, false);
             TextView textView = (TextView)ll.findViewById(R.id.textview);
             textView.setText("position: " + String.valueOf(getArguments().getInt("num")));
@@ -80,30 +72,24 @@ public class MultiViewPagerActivity extends FragmentActivity {
         }
     }
 
-    public static class MyAdapter1 extends FragmentPagerAdapter
-    {
-        public MyAdapter1(FragmentManager fm)
-        {
+    public static class MyAdapter1 extends FragmentPagerAdapter {
+        public MyAdapter1(FragmentManager fm) {
             super(fm);
         }
 
         @Override
-        public int getCount()
-        {
+        public int getCount() {
             return NUM_ITEMS;
         }
 
         @Override
-        public Fragment getItem(int position)
-        {
+        public Fragment getItem(int position) {
             return MyFragment1.newInstance(position);
         }
     }
 
-    public static class MyFragment1 extends Fragment
-    {
-        static MyFragment1 newInstance(int num)
-        {
+    public static class MyFragment1 extends Fragment {
+        static MyFragment1 newInstance(int num) {
             MyFragment1 f = new MyFragment1();
             Bundle args = new Bundle();
             args.putInt("num", num);
@@ -112,8 +98,7 @@ public class MultiViewPagerActivity extends FragmentActivity {
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-        {
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             LinearLayout ll = (LinearLayout)inflater.inflate(R.layout.multi_view_pager_pagerview, container, false);
             TextView textView = (TextView)ll.findViewById(R.id.textview);
             textView.setText("position: " + String.valueOf(getArguments().getInt("num")));

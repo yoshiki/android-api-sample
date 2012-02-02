@@ -22,8 +22,7 @@ public class SimpleViewPagerActivity extends FragmentActivity {
     ViewPager mPager;
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.simple_view_pager_main);
 
@@ -70,30 +69,24 @@ public class SimpleViewPagerActivity extends FragmentActivity {
         });
     }
 
-    public static class MyAdapter extends FragmentPagerAdapter
-    {
-        public MyAdapter(FragmentManager fm)
-        {
+    public static class MyAdapter extends FragmentPagerAdapter {
+        public MyAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
-        public int getCount()
-        {
+        public int getCount() {
             return NUM_ITEMS;
         }
 
         @Override
-        public Fragment getItem(int position)
-        {
+        public Fragment getItem(int position) {
             return MyFragment.newInstance(position);
         }
     }
 
-    public static class MyFragment extends Fragment
-    {
-        static MyFragment newInstance(int num)
-        {
+    public static class MyFragment extends Fragment {
+        static MyFragment newInstance(int num) {
             MyFragment f = new MyFragment();
             Bundle args = new Bundle();
             args.putInt("num", num);
@@ -102,8 +95,7 @@ public class SimpleViewPagerActivity extends FragmentActivity {
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-        {
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             LinearLayout ll = (LinearLayout)inflater.inflate(R.layout.simple_view_pager_pagerview, container, false);
             TextView textView = (TextView)ll.findViewById(R.id.textview);
             textView.setText("position: " + String.valueOf(getArguments().getInt("num")));
