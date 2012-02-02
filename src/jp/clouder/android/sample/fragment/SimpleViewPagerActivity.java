@@ -96,8 +96,8 @@ public class SimpleViewPagerActivity extends FragmentActivity {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            LinearLayout ll = (LinearLayout)inflater.inflate(R.layout.simple_view_pager_pagerview, container, false);
-            TextView textView = (TextView)ll.findViewById(R.id.textview);
+            LinearLayout ll = (LinearLayout)inflater.inflate(R.layout.simple_view_pager_pager_view, container, false);
+            TextView textView = (TextView)ll.findViewById(R.id.text_view);
             textView.setText("position: " + String.valueOf(getArguments().getInt("num")));
             return ll;
         }

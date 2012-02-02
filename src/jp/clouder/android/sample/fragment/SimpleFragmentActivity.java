@@ -19,7 +19,7 @@ public class SimpleFragmentActivity extends FragmentActivity {
     public static class FragmentSimple extends Fragment {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            LinearLayout ll = (LinearLayout)inflater.inflate(R.layout.simple_fragment_textview, container, false);
+            LinearLayout ll = (LinearLayout)inflater.inflate(R.layout.simple_fragment_text_view, container, false);
             return ll;
         }
     }

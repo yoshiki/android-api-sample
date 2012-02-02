@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import jp.clouder.android.sample.fragment.*;
+import jp.clouder.android.sample.media.SimpleCameraActivity;
 
 import java.util.*;
 
@@ -37,6 +38,7 @@ public class SampleListActivity extends ListActivity {
             mSampleList.put("Simple ViewPager", SimpleViewPagerActivity.class);
             mSampleList.put("Multi ViewPager", MultiViewPagerActivity.class);
             mSampleList.put("Simple DialogFragment", SimpleDialogFragmentActivity.class);
+            mSampleList.put("Simple Camera", SimpleCameraActivity.class);
         }
 
         public String[] getSampleNameList() {

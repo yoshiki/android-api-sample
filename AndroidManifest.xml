@@ -15,5 +15,6 @@
         <activity android:name=".fragment.SimpleViewPagerActivity" />
         <activity android:name=".fragment.MultiViewPagerActivity" />
         <activity android:name=".fragment.SimpleDialogFragmentActivity" />
+        <activity android:name=".media.SimpleCameraActivity" />
     </application>
 </manifest>
